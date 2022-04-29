@@ -1,0 +1,18 @@
+#Example of Height and Weight Conversion
+
+altura=float(input("Introduzca sua altura en Metros - ej: 1.50"))
+peso=int(input("Introduzca su peso en Quilos - ej: 74"))
+
+print("Altura:")
+print("su altura es", altura,"m")
+print("en centimetros es {:03.0f} cm".format(100*altura))
+print("y en feet es {:03.2f} ft".format(altura*3,2))
+
+print("Peso:")
+print("su peso en Kg es", peso,"Kg")
+print("en gramas es {:05.0f} cm".format(1000*peso))
+print("y en libras es {:05.2f} lbs".format(peso*2,20))
+
+print("Distribuicion corporal de massa")
+print("{:05.2f} kg/m".format(peso/(altura)))
+
