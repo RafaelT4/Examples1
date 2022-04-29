@@ -1,0 +1,34 @@
+#Ejercicio - Menu
+comprar=[]
+vender=[]
+alquilar=[]
+print("Bienvenido al menu de compra, venta y alquiler")
+while(True):
+    print("Digite el numero de la opción para proseguir")
+    print("1 - Comprar")
+    print("2 - Vender")
+    print("3 - Alquilar")
+    print("4 - Mostrar Lista de Dados")
+    print("5 - Salir")
+    menu=input()
+    if menu == "1":
+        print("Introduzca el objecto que quieres comprar")
+        comprar.append(input())
+        print(comprar)
+    elif menu == "2":
+        print("Introduzca el objecto que quieres vender")
+        vender.append(input())
+        print(vender)
+    elif menu == "3":
+        print("Introduzca el objecto que quieres alquilar")
+        alquilar.append(input())
+        print(alquilar)
+    elif menu == "4":
+        print("Compras:",comprar)
+        print("Vendas:",vender)
+        print("Alquilar:",alquilar)
+    elif menu == "5":
+        print("Hasta Luego!")
+        break
+    else:
+        print("Opción incorrecta")
