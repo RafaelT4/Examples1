@@ -1,0 +1,50 @@
+#List para Paises
+paisesL=["Espana","Rusia","Sudafrica","Australia","Malta"]
+#Tuple para Paises
+paisesT=("Espana","Rusia","Sudafrica","Australia","Malta")
+
+#muestra Lista y Tupla
+print(paisesL)
+print(paisesT)
+print("")
+
+#Muestra 2ndo elemento Lista y Penultimo de Tupla
+print("Segundo elemento:", paisesL[1])
+print("Penultimo elemento:", paisesT[-2])
+print("")
+
+#Modificacion - Lista
+paisesL[3]="Austria"
+print(paisesL)
+print("")
+
+#Modificacion - Tupla
+print("No es posible modificar Tupla")
+print(paisesT)
+print("")
+
+#Busqueda de elemento
+print("Busca por el pais 'Austria' en la Lista")
+print("Austria" in paisesL)
+print("Busca por el pais 'Austria' en la Tupla")
+print("Austria" in paisesT)
+print("")
+
+#Adicion de Elemento
+print("Añadir 'Canada' en la lista")
+paisesL.append("Canada")
+print(paisesL)
+print("")
+print("No es posible añadir nuevo item en Tupla")
+print(paisesT)
+print("")
+
+#Exclusion de item
+print("Borrar 'Rusia' de la lista")
+paisesL.remove("Rusia")
+print(paisesL)
+print("")
+print("No es posible borrar item en Tupla")
+print(paisesT)
+print("")
+
