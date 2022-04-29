@@ -1,0 +1,63 @@
+#Crear Set
+vehiculosS={"Honda","BMW","Audi","Porsche"}
+
+#Crear Diccionario
+vehiculosD = {
+        "brand":"Audi",
+        "model":"TT",
+        "year":2012
+    }
+
+#Muestra Set y Diccionario
+print("Exibicion del Set y del Diccionário")
+print(vehiculosS)
+print(vehiculosD)
+print("")
+
+#Muestra el segundo elemento de Set y de Diccionário
+print("No es posible obtener el 2ndo elemento del Set, no es indexado")
+
+VehiculosDmodel = vehiculosD["brand"]
+print("Diccionario: Brand del vehiculo:", VehiculosDmodel)
+print("")
+
+#Modifica elementos
+print("No es posible modificar elemento del Set")
+print("Modificar Year del model en el Diccionario de 2012 para 2013")
+vehiculosD["year"]=2013
+print(vehiculosD)
+print("")
+
+#Tamaño de Set y Diccionario
+
+#Diccionario
+print("Tamaño del Set y del Diccionário")
+print("Set:", len(vehiculosS))
+print("Diccionário:", len(vehiculosD))
+print("")
+
+#Busqueda
+print("Busca el modelo Honda en Set")
+print("Honda" in vehiculosS)
+
+print("Busca el la clave Year en Diccionario")
+print("year" in vehiculosD)
+print("")
+
+#Añader elementos
+print("Añadir elemento Hyundai en Set")
+vehiculosS.add("Hyundai")
+print(vehiculosS)
+print("Añadir la clave Color en Diccionario")
+vehiculosD["color"]="rojo"
+print(vehiculosD)
+print("")
+
+#Borrar elementos
+print("Borrar la marca BMW del Set")
+vehiculosS.remove("BMW")
+print(vehiculosS)
+print("Borrar la clave Model del Diccionario")
+vehiculosD.pop("model")
+print(vehiculosD)
+print("")
