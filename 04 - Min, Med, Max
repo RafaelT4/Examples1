@@ -1,0 +1,20 @@
+inicio=1
+lista=[]
+
+fim = int(input("Introduzca la cantidad de numeros"))
+while fim >= inicio:
+    valor=int(input("Introduzca un numero intero"))
+    lista.append(valor)
+    inicio += 1
+else:
+    print("")
+    print("Los nuemeros son", lista)
+    #Orden
+    lista.sort()
+    print("Ordenados de menor para mayor es:",lista)
+    #Promedio
+    print("La media es", sum(lista)/len(lista))
+    #Amplitud - Max y Min 
+    print("El mayor numero es", max(lista))
+    print("El menor numero es", min(lista))
+    
