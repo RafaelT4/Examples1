@@ -1,0 +1,40 @@
+class Alumno2:
+    
+    def __init__(self, nombre, nota1, nota2):
+        self.__nombre = nombre
+        self.__NotaFinal = (nota1 + nota2)/2
+        print("Se ha creado el alumno {}".format(self.__nombre))
+        
+    def Calificacion(self):
+        if self.__NotaFinal >= 7:
+            self.__Aprobado = "Aprobado"
+            print("Alumno {} Aprobado".format(self.__nombre))
+        else:
+            self.__Aprobado = "Reprobado"
+            print("Alumno {} Reprobado".format(self.__nombre))
+            
+    def __str__(self):
+        return "Informaciones: {} - {} - Nota final {}".format(self.__nombre, self.__Aprobado, self.__NotaFinal)
+    
+    #Getters
+    @property
+    def NotaVer(self):
+        print("La Nota Final:")
+        return self.__NotaFinal
+    
+    #Setter
+    @NotaVer.setter
+    def NotaVer(self, NuevaNota):
+        self.__NotaFinal =  NuevaNota
+        print("La nueva nota de", self.__nombre, "  es", self.__NotaFinal)
+        
+
+#Creates student named Xavier with Score 5 and 6 (Final Score: 5,5 - not approved)
+a1 = Alumno2("Xavier", 5, 6)
+print(a1.Calificacion())
+str(a1)
+
+#Student Luisa, 8,5 - Approved
+a2 = Alumno2("Luisa", 8, 9)
+print(a2.Calificacion())
+str(a2)
