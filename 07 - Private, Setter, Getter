@@ -1,0 +1,93 @@
+class Producto:
+    
+    def __init__(self, codigo, nombre, precio, tipo):
+        self.__codigo = codigo
+        self.__nombre = nombre
+        self.__precio = precio
+        self.__tipo = tipo
+        print("Se ha creado el producto {}".format(self.__nombre))
+        
+    def Informaciones(self):
+        print("Codigo:", self.__codigo)
+        print("Nombre:", self.__nombre)
+        print("Precio $:", self.__precio)
+        print("Tipo:", self.__tipo)
+        
+    #Getters - Precio
+    @property
+    def Precio(self):
+        #print("Precio cadastrado")
+        return self.__precio
+        
+    #Setter - Precio
+    @Precio.setter
+    def Precio(self, Nuevoprecio):
+        self.__precio = Nuevoprecio
+        print("Novo precio cadastrado:")
+        print("Codigo:", self.__codigo)
+        print("Nombre:", self.__nombre)
+        print("Precio $:", self.__precio)
+        print("Tipo:", self.__tipo)
+
+        
+    #Getters - Nombre
+    @property
+    def Nombre(self):
+        return self.__nombre
+        
+    #Setter - Nombre
+    @Nombre.setter
+    def Nombre(self, Nuevonombre):
+        self.__nombre = Nuevonombre
+        print("Novo nombre cadastrado:")
+        print("Codigo:", self.__codigo)
+        print("Nombre:", self.__nombre)
+        print("Precio $:", self.__precio)
+        print("Tipo:", self.__tipo)
+
+        
+class Pedido:
+    
+    def __init__(self, Produtos, Cantidades):
+        self.__produtos = Produtos
+        self.__cantidades = Cantidades
+        print("Se ha creado registro con exito")
+        
+    def total_pedido(self):
+        return self.__produtos.Precio * self.__cantidades
+    
+    def mostrar_pedidos(self):
+        return "\nItem: {} \nUnidades: {}".format(self.__produtos.Nombre, self.__cantidades)
+       
+       
+#Creation of Products
+d1 = Producto(723, "Nike Shoes", 49, "Vestuario")
+d2 = Producto(396, "Laptop LeNovo", 699, "Electronico")
+d3 = Producto(140, "Kit Herramientas", 199, "Automotivo")
+d4 = Producto(550, "Televisor LG", 499, "Electronico")
+
+ListaProductos = [d1, d2, d3, d4]
+
+#Billing Order
+p1 = Pedido(d1,50)
+p2 = Pedido(d2,10)
+p3 = Pedido(d3,40)
+p4 = Pedido(d4,20)
+
+ListaPedidos = [p1, p2, p3, p4]
+
+#Builds the total value per product order - and sum of value for all product's orders
+S1 = int((p1.total_pedido()))
+S2 = int((p2.total_pedido()))
+S3 = int((p3.total_pedido()))
+S4 = int((p4.total_pedido()))
+
+#Suma total de todos los importes
+Stotal=[S1, S2, S3, S4]
+print("${:,.2f}".format(sum(Stotal)))
+
+#Exibithion of Products and Quantities 
+print(p1.mostrar_pedidos())
+print(p2.mostrar_pedidos())
+print(p3.mostrar_pedidos())
+print(p4.mostrar_pedidos())
