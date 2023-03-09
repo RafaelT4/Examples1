@@ -17,3 +17,4 @@ print("Correccion de la suma de las notas")
 notas[0][2] = (notas[0][0]+notas[0][1])
 notas[1][2] = (notas[1][0]+notas[1][1])
 print(notas)
+#comentario1
